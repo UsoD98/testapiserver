@@ -32,7 +32,7 @@ public class JWTCheckFilter extends OncePerRequestFilter {
         log.info("check uri----------" + path);
 
         // /api/member/로 시작하는 경로는 필터를 타지 않게 설정
-        if(path.startsWith("/api/member/")){
+        if(path.startsWith("/api/member/")|| path.startsWith("/member/kakao/")) {
             return true;
         }
 
